@@ -28,7 +28,7 @@ namespace Labb2
             {
                 for (int i = 0; i < positionList.Count; i++)
                 {
-                    if (positionList[i].Length() > pos.Length()) //17 > new 13
+                    if (positionList[i].Length() > pos.Length())
                     {
                         positionList.Insert(i, pos);
                         return;
@@ -55,7 +55,6 @@ namespace Labb2
             return didRemove;
         }
 
-        //TODO: fix
         public SortedPosList Clone()
         {
             SortedPosList copy = new SortedPosList();
@@ -70,22 +69,21 @@ namespace Labb2
 
         public SortedPosList CircleContent(Position centerPos, double radius)
         {
-            SortedPosList copy = this.Clone();
+            SortedPosList positionsInsideCircle = new SortedPosList();
 
-            for (int i = 0; i < copy.positionList.Count; i++)
+            for (int i = 0; i < this.positionList.Count; i++)
             {
-                Position position = copy.positionList[i];
+                Position position = this.positionList[i];
 
                 bool isInside = (position.X - centerPos.X) * (position.X - centerPos.X) + (position.Y - centerPos.Y) * (position.Y - centerPos.Y) < radius * radius;
 
-                //TODO: FIXME 
-                if (!isInside)
+                if (isInside)
                 {
-                    copy.positionList.Remove(position);
+                    positionsInsideCircle.Add(position.Clone());
                 }
             }
 
-            return copy;
+            return positionsInsideCircle;
         }
 
         //Overload
