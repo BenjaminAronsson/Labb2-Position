@@ -1,5 +1,0 @@
-/Users/dev/Documents/C# grunder/Labb2/Labb2/obj/Debug/Labb2.csprojAssemblyReference.cache
-/Users/dev/Documents/C# grunder/Labb2/Labb2/bin/Debug/Labb2.exe
-/Users/dev/Documents/C# grunder/Labb2/Labb2/bin/Debug/Labb2.pdb
-/Users/dev/Documents/C# grunder/Labb2/Labb2/obj/Debug/Labb2.exe
-/Users/dev/Documents/C# grunder/Labb2/Labb2/obj/Debug/Labb2.pdb
