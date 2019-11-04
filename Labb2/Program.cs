@@ -22,7 +22,7 @@ namespace Labb2
             list1.Add(new Position(1, 4));
             list1.Add(new Position(2, 6));
             list1.Add(new Position(2, 3));
-            Console.WriteLine("list1: " + list1 + "\n");
+            Console.WriteLine("list 1 index of 1,2,3: " + list1[0] + ", " + list1[1] + ", " + list1[2] + "\n");
             list1.Remove(new Position(2, 6));
             Console.WriteLine("updated list1: " +list1 + "\n");
 
@@ -38,6 +38,7 @@ namespace Labb2
             circleList.Add(new Position(2, 2));
             circleList.Add(new Position(3, 3));
             Console.WriteLine("in circle: " + circleList.CircleContent(new Position(5, 5), 4) + "\n");
+            
         }
     }
 }

@@ -32,10 +32,10 @@ namespace Labb2
                     {
                         positionList.Insert(i, pos);
                         return;
-                    } 
-                    
+                    }
+
                 }
-                 positionList.Add(pos);
+                positionList.Add(pos);
             }
         }
 
@@ -43,7 +43,7 @@ namespace Labb2
         {
             bool didRemove = false;
 
-            for(int i = 0; i < positionList.Count; i++)
+            for (int i = 0; i < positionList.Count; i++)
             {
                 if (positionList[i].Equals(pos))
                 {
@@ -100,6 +100,11 @@ namespace Labb2
                 copiedList.Add(sp2.positionList[i]);
             }
             return copiedList;
+        }
+
+        public Position this[int key]
+        {
+            get => this.positionList[key];
         }
     }
 }
