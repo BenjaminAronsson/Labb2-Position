@@ -34,6 +34,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="SortedPosList.cs" />
+    <Compile Include="TextFileHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

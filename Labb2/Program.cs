@@ -38,7 +38,41 @@ namespace Labb2
             circleList.Add(new Position(2, 2));
             circleList.Add(new Position(3, 3));
             Console.WriteLine("in circle: " + circleList.CircleContent(new Position(5, 5), 4) + "\n");
-            
+
+
+            //VG
+
+            SortedPosList AList = new SortedPosList();
+            AList.Add(new Position(3, 7));
+            AList.Add(new Position(1, 4));
+            AList.Add(new Position(2, 6));
+            AList.Add(new Position(2, 3));
+
+            SortedPosList BList = new SortedPosList();
+            BList.Add(new Position(3, 7));
+            BList.Add(new Position(1, 2));
+            BList.Add(new Position(3, 6));
+            BList.Add(new Position(2, 3));
+            //testar att lägga ta bort alla förekommande positioner ifrån den första listan
+            Console.WriteLine("a - b lists: " + (AList * BList) + "\n");
+            Console.WriteLine("b - a lists: " + (BList * AList) + "\n");
+
+            string testPath = @"/Users/dev/Documents/C# grunder/Labb2/Labb2/Data2.txt";
+
+            //testar att spara till filen
+            BList.Save(testPath);
+            Console.WriteLine("saved: " + BList);
+
+            //laddar in blistan ifrån filen
+            SortedPosList listFromFile = new SortedPosList(testPath);
+            Console.WriteLine("from file: " + listFromFile);
+
+            //updaterar filen med det nya värdet
+            listFromFile.Add(new Position(8, 8));
+
+            //skriver ut innehålle ifrån filen
+            listFromFile = new SortedPosList(testPath);
+            Console.WriteLine("updated file: " + listFromFile);
         }
     }
 }
