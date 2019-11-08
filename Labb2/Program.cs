@@ -57,7 +57,7 @@ namespace Labb2
             Console.WriteLine("a - b lists: " + (AList * BList) + "\n");
             Console.WriteLine("b - a lists: " + (BList * AList) + "\n");
 
-            string testPath = @"/Users/dev/Documents/C# grunder/Labb2/Labb2/Data2.txt";
+            string testPath = @"/Users/dev/Documents/C# grunder/Labb2/Labb2/Data.txt";
 
             //testar att spara till filen
             BList.Save(testPath);

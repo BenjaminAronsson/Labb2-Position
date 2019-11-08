@@ -70,7 +70,6 @@ namespace Labb2
                 y *= -1;
             }
 
-
             return new Position(x, y);
         }
 
