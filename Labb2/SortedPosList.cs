@@ -72,7 +72,7 @@ namespace Labb2
             {
                 for (int i = 0; i < positionList.Count; i++)
                 {
-                    if (positionList[i].Length() > pos.Length())
+                    if (positionList[i] > pos)
                     {
                         positionList.Insert(i, pos);
                         if (path != null)
@@ -165,26 +165,40 @@ namespace Labb2
         public static SortedPosList operator *(SortedPosList sp1, SortedPosList sp2)
         {
             //Solution 1
-            SortedPosList copiedList = sp1.Clone();
-            for (int i = 0; i < sp2.Count(); i++)
-            {
-                Position posToRemove = sp2.positionList[i];
-                copiedList.Remove(posToRemove);
-            }
-
-            //TODO: FIXME 
-            //Solution 2
             //SortedPosList copiedList = sp1.Clone();
-
-            //int max = sp1.Count() > sp2.Count() ? sp1.Count() : sp2.Count();
-
-
-            //for (int i = 0; i < max; i++)
+            //for (int i = 0; i < sp2.Count(); i++)
             //{
-
+            //    Position posToRemove = sp2[i];
+            //    copiedList.Remove(posToRemove);
             //}
 
-            return copiedList;
+            //Solution 2
+            int i = 0;
+            int j = 0;
+            SortedPosList newList = new SortedPosList();
+            while(i < sp1.Count() && j < sp2.Count())
+            {
+                //jämför elementen
+                if (sp1[i] < sp2[j])
+                {
+                    newList.Add(sp1[i]);
+                    i++;
+                }
+                else if (sp1[i] > sp2[j])
+                {
+                    j++;
+                } else
+                {
+                    i++;
+                    j++;
+                }
+            }
+
+            //Solution 2
+            return newList;
+
+            //Solution 1
+            //return copiedList;
         }
 
 
