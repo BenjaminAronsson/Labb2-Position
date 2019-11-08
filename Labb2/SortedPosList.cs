@@ -173,24 +173,24 @@ namespace Labb2
             //}
 
             //Solution 2
-            int i = 0;
-            int j = 0;
+            int index1 = 0;
+            int index2 = 0;
             SortedPosList newList = new SortedPosList();
-            while(i < sp1.Count() && j < sp2.Count())
+            while(index1 < sp1.Count() && index2 < sp2.Count())
             {
                 //jämför elementen
-                if (sp1[i] < sp2[j])
+                if (sp1[index1] < sp2[index2])
                 {
-                    newList.Add(sp1[i]);
-                    i++;
+                    newList.Add(sp1[index1]);
+                    index1++;
                 }
-                else if (sp1[i] > sp2[j])
+                else if (sp1[index1] > sp2[index2])
                 {
-                    j++;
+                    index2++;
                 } else
                 {
-                    i++;
-                    j++;
+                    index1++;
+                    index2++;
                 }
             }
 
